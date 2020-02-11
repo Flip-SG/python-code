@@ -2,16 +2,16 @@
 import time
 from threading import Thread
 
-contador = 50000000
+counter = 50000000
 
-def contagem_regressiva(n):
+def countdown(n):
     while n > 0:
         n -= 1
 
 
-inicio = time.time()
-contagem_regressiva(contador)
-fim = time.time()
+start = time.time()
+countdown(counter)
+end = time.time()
 
-print(f"Tempo em segundos: {fim - inicio}")
+print(f"Time recorded in seconds: {end - start}")
 # Recorded time (seconds): 7.1906898021698
