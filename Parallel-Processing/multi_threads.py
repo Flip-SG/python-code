@@ -1,23 +1,30 @@
 # -*- encoding: utf-8 -*-
+"""
+This module provides low-level primitives for working with multiple threads (also called light-weight processes or
+tasks) — multiple threads of control sharing their global data space. For synchronization, simple locks (also called
+mutexes or binary semaphores) are provided. The threading module provides an easier to use and higher-level threading
+API built on top of this module.
+"""
+
 import time
 from threading import Thread
 
-contador = 50000000
+counter = 50000000
 
-def contagem_regressiva(n):
+def countdown(n):
     while n > 0:
         n -= 1
 
 
-t1 = Thread(target=contagem_regressiva, args=(contador//2,))
-t2 = Thread(target=contagem_regressiva, args=(contador//2,))
+t1 = Thread(target=countdown, args=(counter//2,))
+t2 = Thread(target=countdown, args=(counter//2,))
 
-inicio = time.time()
+start = time.time()
 t1.start()
 t2.start()
 t1.join()
 t2.join()
-fim = time.time()
+end = time.time()
 
-print(f"Tempo em segundos: {fim - inicio}")
-# Recorded time (seconds): 7.497258901596069
+print(f"Time recorded in seconds: {end - start}")
+# Recorded time (seconds): 7.672566652297974
