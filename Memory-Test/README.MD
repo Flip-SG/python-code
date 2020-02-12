@@ -1,7 +1,6 @@
 # Memory Usage Test: Function x Generator
 
-This test will compare memory usage when run or the same program with Functions that use Lists
-with 100,000 values and Generators with 100,000 values.
+The programs will perform 100,000 operations, comparing the memory usage when run a program using Functions and Lists with another using Generators.
 
 To perform the test we will use the Fibonacci sequence.
 The Fibonacci Sequence consists of a succession of numbers, such that, defining the first two numbers of the sequence
