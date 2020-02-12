@@ -42,3 +42,6 @@ Multiprocessing outshines threading in cases where the program is CPU intensive 
 
 #### Parallelization in Python
 Python offers two libraries - multiprocessing and threading- for the eponymous parallelization methods. Despite the fundamental difference between them, the two libraries offer a very similar API (as of Python 3.7).
+
+
+Reference: [FloydHub Blog](https://blog.floydhub.com/multiprocessing-vs-threading-in-python-what-every-data-scientist-needs-to-know/)
